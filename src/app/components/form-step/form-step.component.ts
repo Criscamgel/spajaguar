@@ -71,8 +71,11 @@ export class FormStepComponent{
     this.contacto.OtrosDatos.AutorizaMareigua = true       
   }
 
-  sendCentrales(this){
+  sendCentrales(this){    
     this.editable = false;
+
+    console.log("this.contacto ---> ", this.contacto);
+    
     
     if(this.contacto.DatosFinancieros.ActividadEconomica){
       if(this.contacto.DatosFinancieros.ActividadEconomica === 1){

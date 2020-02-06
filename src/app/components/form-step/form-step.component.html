@@ -221,7 +221,7 @@
                     </mat-form-field>
                     </div>
 
-                    <div class="col-12 col-sm-12">
+                    <!-- <div class="col-12 col-sm-12">
                             <mat-form-field class="full-width">
                                     <input 
                                     matInput
@@ -230,13 +230,30 @@
                                     name="ingresoMensual"
                                     #ingresoMensual="ngModel"
                                     [(ngModel)]="contacto.DatosFinancieros.IngresoMensual"
-                                    (blur)="contacto.DatosFinancieros.IngresoMensual = toNumber($event.target.value)"
+                                    (change)="contacto.DatosFinancieros.IngresoMensual = toNumber($event.target.value)"
                                     [customMin]="min"
                                     appCurrency
                                     required>
                                     <small *ngIf="ingresoMensual.touched && ingresoMensual.errors?.required" class="error col-12">Inserta tus ingresos mensuales</small>       
                                     <small *ngIf="ingresoMensual.touched && ingresoMensual.errors?.customMin" class="error col-12">Ingresa un valor mayor</small>
                                 </mat-form-field>
+                    </div> -->
+                    
+                    <div class="col-12 col-sm-12">
+                        <mat-form-field class="full-width">
+                                <input
+                                matInput 
+                                currencyMask
+                                placeholder="Ingresos Mensuales"
+                                name="ingresoMensual"
+                                #ingresoMensual="ngModel"
+                                [(ngModel)]="contacto.DatosFinancieros.IngresoMensual"
+                                [options]="{ align: 'left', prefix: '$ ', thousands: '.', decimal: ',', precision: 0 }"
+                                [min]="min"
+                                required/>
+                                <small *ngIf="ingresoMensual.touched && ingresoMensual.errors?.required" class="error col-12">Inserta tus ingresos mensuales</small>       
+                                <small *ngIf="ingresoMensual.touched && ingresoMensual.errors?.min" class="error col-12">Ingresa un valor mayor</small>
+                            </mat-form-field>
                     </div> 
                     
                     
@@ -244,20 +261,16 @@
                             <mat-form-field class="full-width">
                                     <input 
                                     matInput
-                                    type="tel"
+                                    currencyMask
                                     placeholder="¿Cuánto dinero deseas financiar?"
                                     name="valorFinanciar"
                                     #valorFinanciar="ngModel"
                                     [(ngModel)]="contacto.OtrosDatos.ValorFinanciar"
-                                    (ngModelChange)="valorFinanciarCop = toNumber($event)"
-                                    (blur)="contacto.OtrosDatos.ValorFinanciar = toNumber($event.target.value)"
-                                    minlength="11"
-                                    [customMin]="minF"
-                                    appCurrency
+                                    [options]="{ align: 'left', prefix: '$ ', thousands: '.', decimal: ',', precision: 0 }"
+                                    [min]="minF"
                                     required>
                                     <small *ngIf="valorFinanciar.touched && valorFinanciar.errors?.required" class="error error col-12">Inserta el valor a financiar</small>   
-                                    <small *ngIf="valorFinanciar.touched && valorFinanciar.errors?.customMin" class="error error col-12">Inserta el valor a financiar</small>   
-                                    <small *ngIf="valorFinanciar.errors?.customMin" class="error error col-12"></small>
+                                    <small *ngIf="valorFinanciar.touched && valorFinanciar.errors?.min" class="error error col-12">Ingresa un valor mayor</small>
                                 </mat-form-field>
                     </div>
 

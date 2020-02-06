@@ -10,6 +10,7 @@ import { CurrencyDirective } from './directives/currency.directive';
 import { ToNumberPipe } from './pipes/to-number.pipe';
 import { CustomMinDirective } from './directives/custom-min.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
