@@ -373,7 +373,7 @@ button {
 @media only screen and (min-width: 1366px) {
   .row.principal.grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
   }
   .row.principal.grid app-form-step {
     grid-column: 1;
@@ -586,4 +586,12 @@ button {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.mat-stepper-horizontal-line {
+  width: 100%;
+}
+
+.mat-horizontal-stepper-header-container {
+  margin: 0px 25px;
 }
