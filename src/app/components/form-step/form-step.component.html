@@ -267,7 +267,7 @@
                                     #valorFinanciar="ngModel"
                                     [(ngModel)]="contacto.OtrosDatos.ValorFinanciar"
                                     [options]="{ align: 'left', prefix: '$ ', thousands: '.', decimal: ',', precision: 0 }"
-                                    min="12000000"
+                                    min="10000000"
                                     required>
                                     <small *ngIf="valorFinanciar.touched && valorFinanciar.errors?.required" class="error error col-12">Inserta el valor a financiar</small>   
                                     <small *ngIf="valorFinanciar.touched && valorFinanciar.errors?.min" class="error error col-12">Ingresa un valor mayor</small>
