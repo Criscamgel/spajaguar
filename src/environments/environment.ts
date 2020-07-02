@@ -32,13 +32,13 @@ export const environment = {
 
   /* Urls */
   /* urlAp: "https://api.premiercredit.co:11445/PremierServices_API_EXT_TST/api/login/authenticate", */
-  urlAp: "https://api.premiercredit.co:11444/PremierServices_API_EXT/api/login/authenticate",
-  /* urlVp: "https://api.premiercredit.co:11445/PremierServices_API_EXT_TST/api/viabilizacion/getviabilizacion", */
-  urlVp: "https://api.premiercredit.co:11444/PremierServices_API_EXT/api/viabilizacion/getviabilizacion",
+  urlAp: "https://apitst.premiercredit.co:11445/PremierServices_api_ext_tst/api/login/authenticate",
+  /* urlVp: "https://api.premiercredit.co:11445/PremierServices_api_ext_tst_TST/api/viabilizacion/getviabilizacion", */
+  urlVp: "https://apitst.premiercredit.co:11445/PremierServices_api_ext_tst/api/viabilizacion/getviabilizacion",
 
   /* Credentials */
-  username: "CarroYa",
-  password: "C@rr0Y@",
+  username: "jaguar",
+  password: "j@gu4r",
   respuesta: {}
 
 };
