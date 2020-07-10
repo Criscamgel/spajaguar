@@ -11,6 +11,8 @@ import { ToNumberPipe } from './pipes/to-number.pipe';
 import { CustomMinDirective } from './directives/custom-min.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     FormStepComponent,
     CurrencyDirective,
     ToNumberPipe,
-    CustomMinDirective
+    CustomMinDirective,
+    HomeComponent
     
   ],
   imports: [
@@ -29,7 +32,8 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
